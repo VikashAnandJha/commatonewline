@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GST Code</title>
+</head>
+<body>
+    <h1>My GST Calculator</h1>
+
+    Product Price: <input type="number" id="product_price" />
+   
+    GST(%): <input type="number" id="tax" />
+
+    <br>
+    <button onclick="calculateGST()">Calculate Final Price</button>
+    <br>
+    Final Price: <span id="final_price">00</span>
+
+
+
+
+    <style>
+        input{
+            padding: 10px;
+            margin: 5px;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        #final_price{
+            font-size: 50px;
+        }
+    </style>
+
+<script>
+
+    function calculateGST(){
+        let product_price=document.getElementById("product_price").value;
+   
+     
+        let tax=document.getElementById("tax").value;
+         
+   let final_price=parseInt(product_price)+parseInt(product_price)*tax/100;
+
+   if(!(final_price>0)) final_price=0; 
+   //alert(final_price)
+
+   document.getElementById("final_price").innerHTML=final_price;
+   
+   
+    }
+
+
+    setInterval(function(){
+        calculateGST()   
+    },100)
+
+    </script>
+
+    
+</body>
+</html>

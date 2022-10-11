@@ -1,0 +1,91 @@
+body{
+    background-color: #F0F2F5;
+    margin: 0;
+    padding: 0;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.left-content{
+    
+     
+    flex: 60%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.left-box{
+    text-align: left;
+    width: 50%;
+
+}
+.left-box>big{
+    font-size: 28px;
+}
+.right-content{
+    
+     
+    flex: 40%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.login-box{
+    background-color: white;
+    padding: 20px;
+    width: 50%;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    float: left;
+    
+}
+.login-box>input{
+    height: 25px;
+    width: 90%;
+    border: 0.1px solid #F0F2F5;
+    padding: 10px;
+    border-radius: 10px;
+margin: 5px;
+}
+.login-btn{
+     
+    padding: 15px;
+    width: 100%;
+    border: 0.1px solid #F0F2F5;
+    border-radius: 10px;
+    background-color:#166FE5 ;
+    color: white;
+    margin-bottom: 10px;
+}
+a{
+    text-decoration: none;
+    margin: 5px;
+}
+
+.create-btn{
+     
+    padding: 15px;
+    width: 80%;
+    border: 0.1px solid #F0F2F5;
+    border-radius: 10px;
+    background-color:#36A420 ;
+    color: white;
+    margin-top: 20px;
+}
+
+ 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comma to New line Replacer</title>
+</head>
+<body>
+   
+    Enter your text<br>
+  <textarea id="org" onkeypress="replace()"  onchange="replace()"></textarea> 
+  
+  <br>
+  Final output<br>
+  <textarea id="final"></textarea>
+<hr>
+<button onclick="replace()">replace</button>
+
+  <script>
+
+    function replace(){
+      
+        let text=document.getElementById("org").value;
+let final=document.getElementById("final");
+final.value="";
+final.value=text.replaceAll(",","\n")
+    }
+
+
+
+  </script>
+
+  <style>
+    #org{
+      width: 80%;
+      height: 150px;
+    } 
+    #final{
+      width: 80%;
+      height: 250px;
+    }
+  </style>
+
+ 
+</body>
+</html>

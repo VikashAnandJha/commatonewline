@@ -1,0 +1,62 @@
+body{
+    margin: 0px;
+    padding: 0px;
+   
+    background-color: #36393F;
+    color: white;
+}
+.sidebar{
+    width: 80px;
+    height: 100vh;
+    background-color: #202225;
+    
+    float: left;
+}
+
+.channels{
+    width: 250px;
+    height: 100vh;
+   
+    background-color: #2F3136;
+    float: left;
+}
+
+.wrapper{
+    width: 100%;
+}
+
+.main_area{
+ 
+  
+ float: left; 
+   
+}
+
+.chat-area{
+ 
+ 
+float: left;
+width: 100%;
+display: block;
+
+}
+.active-area{
+    float: right;
+    
+    width: 300px;
+    position: fixed;
+    right: 0px;
+    height: 100vh;
+    border-left: 1px solid #42464D;
+    padding: 5px;
+    color: white;
+   
+}
+
+ 
+
+@media only screen and (max-width: 1200px) {
+    .active-area{
+        display: none;
+    }
+  }

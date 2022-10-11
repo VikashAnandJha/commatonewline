@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search Website</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="box">
+        <input type="text" id="query"/><button id="searchBtn">Search</button><br><br>
+       
+       
+        <img src="" class="poster" id="poster"/>
+        <hr>
+       
+        <p id="movie_name"></p>
+        <br>
+        
+        <p id="movie_desc"></p>
+
+    </div>
+
+
+    <script>
+$('#searchBtn').click(function(){
+
+let query=$('#query').val();
+
+
+    $.getJSON("https://api.themoviedb.org/3/search/movie?api_key=9cf0c6c79acfc28cdfec611d4b421162&language=en-US&query="+query+"&page=1&include_adult=false",function(data){
+
+console.log(data.results[0])
+$('#movie_name').html(data.results[0].title)
+$('#movie_desc').html(data.results[0].overview)
+$('#poster').attr("src","https://image.tmdb.org/t/p/w500"+data.results[0].poster_path)
+})
+
+
+
+})
+        
+
+       
+    </script>
+
+
+
+    <style>
+         
+        .poster{
+            width: 200px;
+        }
+        #movie_name{
+            font-size: 25px;
+            font-weight: bolder;
+            color: green;
+
+        }
+    </style>
+    
+</body>
+</html>

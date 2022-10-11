@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="name">my name is weezytube</p>
+
+     <button id="mybtn">click</button>
+
+    <script>
+
+let showing=true;
+ document.getElementById("mybtn").addEventListener("click",function(){
+
+    if(showing)
+    {
+        document.getElementById("name").style.display="none";
+        showing=false;
+    }
+    else
+   {
+    showing=true;
+    document.getElementById("name").style.display="block";
+   } 
+
+
+
+ })
+
+
+
+//document.getElementById("name").style.display="none";
+ 
+
+    </script>
+    
+</body>
+</html>

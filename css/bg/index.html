@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video bg</title>
+</head>
+<body>
+
+    <div class="video-box">
+
+        <div class="data">
+            <h1>welcome to my website</h1>
+        </div>
+
+        <video src="./mountains.mp4" autoplay loop>
+
+        </video>
+
+    </div>
+
+    <style>
+        .video-box{
+            display: flex;
+            flex-direction: column;
+            overflow-y: hidden;
+            
+            position: fixed;
+        }
+        body{
+             margin: 0px;
+             padding: 0px;
+             
+        }
+        video{
+            min-width: 100%;
+             
+             
+            
+        }
+        .data{
+            position: fixed;
+            float: left;
+            text-align: center;
+            width: 100%;
+            margin-top: 10%;
+            color: white;
+        }
+    </style>
+    
+</body>
+</html>

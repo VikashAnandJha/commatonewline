@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProgressBar using CSS</title>
+</head>
+<body>
+Progress
+<div class="progress-box">
+    <div class="progress-bar" id="progress"></div>
+</div>  
+
+<style>
+.progress-box{
+    width: 500px;
+    height: 20px;
+    border: 1px solid black;
+    background-color: #E2D1F7;
+  
+}
+
+.progress-bar{
+    background-color: #5D19AF;
+    width: 0%;
+    height: 100%;
+     
+
+}
+
+</style>
+
+
+<script>
+  
+  var i=0;
+  setInterval(function(){
+
+
+    if(i<=10)
+    document.getElementById("progress").style.width=i*10+'%';
+
+
+i++;
+  },100)
+
+</script>
+
+
+</body>
+</html>
